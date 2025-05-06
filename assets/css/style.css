@@ -402,3 +402,140 @@ footer {
   cursor: pointer;
   color: #333;
 }
+
+/* RESPONSIVIDADE: até 768px (celulares e tablets pequenos) */
+@media (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  header {
+    padding: 1em 0.5em;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  main {
+    padding: 20px 15px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 15px;
+  }
+
+  .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .thumb {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .modal-conteudo {
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+  }
+
+  .modal-conteudo iframe {
+    height: 300px;
+  }
+
+  .iframe-wrapper iframe {
+    height: 300px;
+  }
+
+  .img-jogo {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .formulario-contato {
+    padding: 20px;
+  }
+
+  .formulario-contato button {
+    width: 100%;
+  }
+
+  .jogo-container {
+    padding: 20px 10px;
+  }
+
+  footer {
+    padding: 1em 0.5em;
+  }
+
+  .close,
+  .prev,
+  .next {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .menu li {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .botao-menu {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  main {
+    padding: 20px 10px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .formulario-contato {
+    padding: 20px;
+  }
+
+  .iframe-wrapper iframe,
+  .modal-conteudo iframe {
+    height: 300px;
+  }
+
+  .thumb {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .modal-conteudo {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .close,
+  .prev,
+  .next {
+    font-size: 30px;
+  }
+
+  .botao-sobre {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .img-jogo {
+    max-width: 90%;
+  }
+}
