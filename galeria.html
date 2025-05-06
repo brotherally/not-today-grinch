@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="jogo.html" class="botao-menu">Jogar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Galeria</h1>
+
+    <div class="galeria">
+      <img src="assets/images/01.png" class="thumb" onclick="openLightbox(0)" />
+      <img src="assets/images/02.png" class="thumb" onclick="openLightbox(1)" />
+      <img src="assets/images/03.png" class="thumb" onclick="openLightbox(2)" />
+      <img src="assets/images/04.png" class="thumb" onclick="openLightbox(3)" />
+      <img src="assets/images/05.png" class="thumb" onclick="openLightbox(4)" />
+      <img src="assets/images/06.png" class="thumb" onclick="openLightbox(5)" />
+      <img src="assets/images/07.png" class="thumb" onclick="openLightbox(6)" />
+    </div>
+
+    <div id="lightbox" class="lightbox">
+      <span class="close" onclick="closeLightbox()">&times;</span>
+      <img class="lightbox-content" id="lightbox-img" />
+      <a class="prev" onclick="changeImage(-1); event.stopPropagation();">&#10094;</a>
+      <a class="next" onclick="changeImage(1); event.stopPropagation();">&#10095;</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Not Today Grinch</p>
+  </footer>
+
+  <script>
+    const images = document.querySelectorAll(".thumb");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      lightbox.style.display = "block";
+      showImage();
+    }
+
+    function closeLightbox() {
+      lightbox.style.display = "none";
+    }
+
+    function showImage() {
+      lightboxImg.src = images[currentIndex].src;
+    }
+
+    function changeImage(n) {
+      currentIndex = (currentIndex + n + images.length) % images.length;
+      showImage();
+    }
+
+    // Fecha a lightbox só se clicar fora da imagem
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="jogo.html" class="botao-menu">Jogar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Sobre o Jogo</h1>
+
+    <p><strong>Not Today Grinch</strong> é uma aventura natalina cheia de ação, diversão e espírito festivo!<br>
+      Neste jogo de plataforma em estilo cartoon, você embarca em uma missão ao lado do nosso herói: o próprio
+      <strong>Papai Noel</strong>.
+    </p>
+
+    <p>Tudo estava indo bem no Polo Norte, até que o <strong>Grinch</strong>, com seu velho coração de três tamanhos a
+      menos, decidiu que neste ano ninguém teria presentes. Em uma noite silenciosa — mas nem tanto — ele invadiu os
+      depósitos de brinquedos, escondeu os presentes e espalhou armadilhas pelo caminho.</p>
+
+    <p>Agora, cabe a você ajudar o Papai Noel a recuperar os presentes roubados, escapar dos perigos e derrotar o Grinch
+      antes que o relógio bata meia-noite! Mas cuidado: o vilão não está sozinho — ele soltou seus <strong>primos
+        verdes</strong> pelo caminho, todos prontos para atrapalhar sua missão a todo custo.</p>
+
+    <p>Prepare-se para <strong>saltar entre plataformas congeladas</strong>, <strong>escapar de armadilhas
+        traiçoeiras</strong>, <strong>enfrentar pequenos Grinchs</strong> determinados a te impedir e mostrar que, neste
+      Natal, a magia e a alegria vão prevalecer.</p>
+
+    <p>Ah, e se encontrar um <strong>panetone</strong> pelo caminho... pode pegar sem medo! Só cuidado com os de frutas
+      cristalizadas — dizem que até o Grinch prefere <em>chocotone</em>.</p>
+
+    <p><strong>⚠️ Dicas de jogabilidade:</strong> Evite tocar nos <strong>cristais pontiagudos</strong> — eles funcionam
+      como armadilhas e podem derrotar o Papai Noel. Para vencer os inimigos, <strong>salte sobre a cabeça
+        deles</strong>, como nos clássicos jogos de plataforma!</p>
+
+    <p><strong>🎄 Porque neste Natal... Not Today, Grinch!</strong></p>
+
+  </main>
+  <footer>
+    <p>© 2025 Not Today Grinch</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+  <script>
+    // Cria e anima flocos de neve mais sutis
+    const numFlocos = 20;
+
+    for (let i = 0; i < numFlocos; i++) {
+      const floco = document.createElement('div');
+      floco.classList.add('snowflake');
+      floco.textContent = '❄';
+      floco.style.left = Math.random() * 100 + 'vw';
+      floco.style.animationDelay = Math.random() * 5 + 's';
+      floco.style.fontSize = (Math.random() * 10 + 14) + 'px';
+      document.body.appendChild(floco);
+    }
+  </script>
+
+
+</body>
+
+</html>
