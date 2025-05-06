@@ -21,15 +21,24 @@
       </ul>
     </nav>
   </header>
+
   <main class="jogo-container">
     <h1>Jogue Agora!</h1>
-    <div class="iframe-wrapper">
-      <iframe src="jogo/index.html" style="width: 100%; max-width: 720px; height: 90vh; border: none; border-radius: 16px;"></iframe>
-    </div>
+    <img src="assets/images/thumb-jogo.png" alt="Clique para jogar" id="abrirModal" class="img-jogo">
   </main>
+
+  <!-- Modal do jogo -->
+  <div id="modalJogo" class="modal">
+    <div class="modal-conteudo">
+      <span class="fechar" id="fecharModal">&times;</span>
+      <iframe src="jogo/index.html" frameborder="0"></iframe>
+    </div>
+  </div>
+
   <footer>
     <p>© 2025 Not Today Grinch</p>
   </footer>
+
   <script src="assets/js/script.js"></script>
 </body>
 

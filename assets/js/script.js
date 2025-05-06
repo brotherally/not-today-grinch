@@ -26,3 +26,20 @@ function changeImage(direction) {
   if (currentImageIndex >= images.length) currentImageIndex = 0;
   document.getElementById("lightbox-img").src = images[currentImageIndex];
 }
+const abrirModal = document.getElementById('abrirModal');
+const fecharModal = document.getElementById('fecharModal');
+const modal = document.getElementById('modalJogo');
+
+abrirModal.addEventListener('click', () => {
+  modal.style.display = 'block';
+});
+
+fecharModal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
