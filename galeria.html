@@ -21,6 +21,17 @@
         <li><a href="jogo.html" class="botao-menu">Jogar</a></li>
       </ul>
     </nav>
+    <!-- Menu HAMBÚRGUER para mobile -->
+    <div class="menu-hamburguer-container">
+      <button id="hamburguer">&#9776;</button>
+      <ul id="menu-mobile" class="menu-mobile hidden">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="jogo.html" class="botao-menu">Jogar</a></li>
+      </ul>
+    </div>
   </header>
   <main>
     <h1>Galeria</h1>
@@ -47,38 +58,8 @@
     <p>© 2025 Not Today Grinch</p>
   </footer>
 
-  <script>
-    const images = document.querySelectorAll(".thumb");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-    let currentIndex = 0;
 
-    function openLightbox(index) {
-      currentIndex = index;
-      lightbox.style.display = "block";
-      showImage();
-    }
-
-    function closeLightbox() {
-      lightbox.style.display = "none";
-    }
-
-    function showImage() {
-      lightboxImg.src = images[currentIndex].src;
-    }
-
-    function changeImage(n) {
-      currentIndex = (currentIndex + n + images.length) % images.length;
-      showImage();
-    }
-
-    // Fecha a lightbox só se clicar fora da imagem
-    lightbox.addEventListener("click", function (e) {
-      if (e.target === lightbox) {
-        closeLightbox();
-      }
-    });
-  </script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
